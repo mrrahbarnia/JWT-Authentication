@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Notes
+{% endblock title %}
+
+{% block header_title %}
+My Notes
+{% endblock header_title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href={% static "css/notes.css" %}>
+{% endblock extra_css %}
+
+{% block header-bottom__right %}
+<a href="#">Logout</a>
+{% endblock header-bottom__right %}
+
+{% block header-bottom__left %}
+<a href="{% url 'accounts:my_profile' %}">Profile</a>
+{% endblock header-bottom__left %}
+
+{% block content %}
+<div class="container">
+    <div class="notes-wrapper">
+        <ul class="ul-list">
+        </ul>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+<script type="module" src={% static "js/Note.js" %}></script>
+{% endblock extra_js %}

@@ -1,0 +1,28 @@
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 50%;
+    gap: 0.8rem;
+}
+
+.profile-email__wrapper {
+    display: flex;
+    color: #fff;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.profile__email {
+    font-size: 2rem;
+}
+
+.profile__email-svg {
+    max-width: 2rem;
+}
+
+.profile__role {
+    color: #fff;
+    font-size: 2.8rem;
+}

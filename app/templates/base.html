@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href={% static "css/base.css" %}>
+    {% block extra_css %}
+    {% endblock extra_css %}
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <section class="header__top">
+                <h1>
+                    {% block header_title %}{% endblock header_title %}
+                </h1>
+            </section>
+            <section class="header__bottom">
+                <div class="header-bottom__left">
+                    {% block header-bottom__left %}{% endblock header-bottom__left %}
+                </div>
+                <div class="header-bottom__right">
+                    {% block header-bottom__right %}{% endblock header-bottom__right %}
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    <script type="module" src={% static "js/Base.js" %}></script>
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

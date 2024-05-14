@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block header_title %}
+Login Page
+{% endblock header_title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href={% static "css/login.css" %}>
+{% endblock extra_css %}
+
+{% block header-bottom__right %}
+<a href="{% url 'accounts:register' %}">Register</a>
+{% endblock header-bottom__right %}
+
+{% block header-bottom__left %}
+{% endblock header-bottom__left %}
+
+{% block content %}
+<div class="container">
+    <div class="form-wrapper">
+        <form class="form">
+            <input class="form__input" name="email" type="text" placeholder="Email">
+            <input class="form__input" name="password" type="password" placeholder="Password">
+            <input class="form__btn" type="submit" value="Login">
+            <p class="form__result"></p>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+<script type="module" src={% static "js/Login.js" %}></script>
+{% endblock extra_js %}

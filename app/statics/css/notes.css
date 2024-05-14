@@ -1,0 +1,19 @@
+.notes-wrapper {
+    max-width: 70%;
+    margin: 5rem auto;
+}
+
+.ul-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-list__item {
+    list-style-type: none;
+    color: #fff;
+    font-size: 2rem;
+}
+

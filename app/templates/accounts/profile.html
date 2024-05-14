@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Profile
+{% endblock title %}
+
+{% block header_title %}
+My Profile
+{% endblock header_title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href={% static "css/profile.css" %}>
+{% endblock extra_css %}
+
+{% block header-bottom__left %}
+<a href="{% url 'notes:notes' %}">Notes</a>
+{% endblock header-bottom__left %}
+
+{% block content %}
+<div class="container">
+    <div class="profile-wrapper">
+        <div class="profile-email__wrapper">
+            <img class="profile__email-svg" src={% static "images/email-8-svgrepo-com.svg" %}>
+            <p class="profile__email"></p>
+        </div>
+
+        <p class="profile__role"></p>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+<script type="module" src={% static 'js/myProfile.js' %}></script>
+{% endblock extra_js %}
